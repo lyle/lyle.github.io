@@ -323,8 +323,12 @@ footer {
   position:fixed;
   bottom:10px;
 	padding-left: 50px;*/
+  clear: both;
+  margin-top: 30px;
+  margin-left: 20px;
+  color: #999;
 }
-
+footer a{color:#f99;}
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
