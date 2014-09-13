@@ -18,3 +18,5 @@ A few things are interesting here:
 
 1) The window.screen.width / height stay the same. The iPhone 6 Plus
 2) In landscape the web app goes full screen, with no status bar.
+
+
