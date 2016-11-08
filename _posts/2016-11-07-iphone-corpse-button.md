@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My iPhone 7+: Camera Good and Button Dead
+title: My iPhone 7+.. Camera Good and Button Dead
 ---
 
 {{ page.title }}
