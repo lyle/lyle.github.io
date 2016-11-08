@@ -1,3 +1,10 @@
+---
+layout: post
+title: iPhone 6 and 6 Plus sizes
+---
+
+{{ page.title }}
+================
 Starting work on the iPhone 6 and iPhone 6 plus.
 I am working on a hybrid app. A native wrapper and a UIWebView with my main code in HTML/JS/CSS.
 But for this testing I am simply doing a mobile safari home-screen bookmark.
