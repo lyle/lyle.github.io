@@ -17,20 +17,42 @@
     <div class="wrapper">
       <header>
         <h1 class="header">Lyle Troxell</h1>
-        <p class="header">Hacker, Photographer, Maker, &amp; Father</p>
-
-
-
+        <p class="header">Software Engineer, Photographer, Maker, &amp; Father</p>
         <ul>
+          <li><a href="https://lyle.troxell.com">personal site</a></li>
           <li><a href="https://github.com/lyle">github.com/lyle</a></li>
           <li><a href="https://twitter.com/lyle">twitter.com/lyle</a></li>
         </ul>
-	<iframe style="border: 0; margin: 0; padding: 0;"
-        	src="https://www.gittip.com/lyle/widget.html"
-        	width="48pt" height="22pt"></iframe>
       </header>
       <section>
-        
+      <ol class="breadcrumb">
+<li class="root"><a href="{{ site.baseurl }}/">home</a></li>
+{% capture page_url_without_index_html %}{{ page.url | remove: "/index.html" }}{% endcapture %}
+
+{% assign splitted_url_parts = page_url_without_index_html | split: '/' %}
+{% capture forLoopMaxInt %}{{ splitted_url_parts.size | minus:1 }}{% endcapture %}
+{% for i in (1..forLoopMaxInt) %}
+    {% capture current_breadcrumb_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}{% endcapture %}
+    {% capture current_breadcrumb_md_url %}{{next_prepender}}/{{ splitted_url_parts[i] }}/{% endcapture %}
+    {% capture next_prepender %}{{next_prepender}}/{{ splitted_url_parts[i] }}{% endcapture %}
+
+    {% for breadcrumb_page in site.posts %}
+        {% if current_breadcrumb_url == breadcrumb_page.url or current_breadcrumb_md_url == breadcrumb_page.url  %}
+        {% if breadcrumb_page.breadcrumb %}
+          {% assign page_name = breadcrumb_page.breadcrumb %}
+        {% else %}
+          {% assign page_name = breadcrumb_page.title %}
+        {% endif %}
+        {% assign j = forLoopMaxInt | plus: 0 %}
+            <li {% if i == j %}class="active"{% endif %}>
+                {% capture breadcrumb_page_page_url_without_index_html %}{{ breadcrumb_page.url | remove: "index.html" }}{% endcapture %}
+                {% assign my_variable = readcrumb_page.breadcrumb or "dd"%}
+                <a href="{{ site.baseurl }}{{breadcrumb_page_page_url_without_index_html}}">{{page_name}}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+</ol>
         {{ content }}
 
       </section>

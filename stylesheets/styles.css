@@ -415,3 +415,19 @@ footer a{color:#f99;}
     color:#444;
   }
 }
+
+.breadcrumb li{
+  list-style: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb li::before {
+  content: ' / ';
+}
+.breadcrumb li.root::before {
+  content: '';
+}
+.breadcrumb li.active a{
+  font-weight: lighter;
+}
