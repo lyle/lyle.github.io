@@ -9,6 +9,8 @@ title: My iPhone 7+.. Camera Good and Button Dead
 I am enjoying my iPhone7 plus. The 2x camera is fun to use, and,
 even though I am a Nikon SLR user, I love the portrait mode of the iPhone with the software depth of field.
 
+* Take a look at the photos of [Miles I took with the iOS portrait feature](http://pix.lyle.troxell.com/Other/GeekSpeak-2016-11/n-zMDZCM/). iOS saves the original and the "blured".
+
 
 When the phone is powered off, you can tell there is no real button. I take it this design was due to the
 lack of longevity of moving parts, or, more likely, the perceived lack of longevity. Though the iPhone's have not really
